@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # vscode files generated automatically
-.vscode
+.vscode/
 
 # Environments
 .env
@@ -14,3 +14,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+#Ignore some files
+output.xlsx
+sample.kmz
