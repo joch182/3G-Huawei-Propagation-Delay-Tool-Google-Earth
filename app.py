@@ -14,14 +14,14 @@ ept_path = ''
 
 def get_ept_template():
     save_dir = askdirectory()
-    src = os.path.abspath(os.getcwd()) + '/ept_template.csv'
+    src = os.path.abspath(os.getcwd()) + '/assets/ept_template.csv'
     shutil.copy(src, save_dir)
     open("ept_template.csv", 'r')
 
 
 def get_data_template():
     save_dir = askdirectory()
-    src = os.path.abspath(os.getcwd()) + '/data_template.csv'
+    src = os.path.abspath(os.getcwd()) + '/assets/data_template.csv'
     shutil.copy(src, save_dir)
     open("data_template.csv", 'r')
 
