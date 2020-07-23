@@ -14,16 +14,18 @@ ept_path = ''
 
 def get_ept_template():
     save_dir = askdirectory()
-    src = os.path.abspath(os.getcwd()) + '/assets/ept_template.csv'
-    shutil.copy(src, save_dir)
-    open("ept_template.csv", 'r')
+    if save_dir != '':
+        src = os.path.abspath(os.getcwd()) + '/assets/ept_template.csv'
+        shutil.copy(src, save_dir)
+        open("ept_template.csv", 'r')
 
 
 def get_data_template():
     save_dir = askdirectory()
-    src = os.path.abspath(os.getcwd()) + '/assets/data_template.csv'
-    shutil.copy(src, save_dir)
-    open("data_template.csv", 'r')
+    if save_dir != '':
+        src = os.path.abspath(os.getcwd()) + '/assets/data_template.csv'
+        shutil.copy(src, save_dir)
+        open("data_template.csv", 'r')
 
 ''' This function is to browse the data got it from U2000 '''
 def browse_data():
@@ -61,10 +63,10 @@ button3 = Button(root, text="Send", style='Send.TButton', command=submit_button)
 button3.grid(row = 2, column = 3, pady = 10, padx = 5)
 
 button4 = Button(root, text="Download EPT Template", style='Send.TButton', command=get_ept_template)
-button4.grid(row = 5, column = 2, pady = 10, padx = 5)
+button4.grid(row = 5, column = 4, pady = 10, padx = 5)
 
 button5 = Button(root, text="Download Data Template", style='Send.TButton', command=get_data_template)
-button5.grid(row = 5, column = 4, pady = 10, padx = 5)
+button5.grid(row = 5, column = 2, pady = 10, padx = 5)
 
 ''' This function keeps the program running'''
 mainloop()

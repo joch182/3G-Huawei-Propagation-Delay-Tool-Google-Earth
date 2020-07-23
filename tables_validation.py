@@ -14,7 +14,7 @@ def validate(data_path, ept_path):
         print('Data file is not according to template')
         sys.exit()
 
-    if (len(ept.columns) != 4 or ept.columns.values[0] != 'Cell_Name' or ept.columns.values[0] != 'Lon' or ept.columns.values[1] != 'Lat' or ept.columns.values[2] != 'Azimuth' or ept.columns.values[3] != 'Beamwidth'):
+    if (len(ept.columns) != 4 or ept.index.name != 'Cell_Name' or ept.columns.values[0] != 'Lon' or ept.columns.values[1] != 'Lat' or ept.columns.values[2] != 'Azimuth' or ept.columns.values[3] != 'Beamwidth'):
         print('EPT file is not according to template')
         sys.exit()
 
