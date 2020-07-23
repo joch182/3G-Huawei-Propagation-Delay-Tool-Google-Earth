@@ -10,6 +10,8 @@ This is a python tool to generate KML files for each propagation delay from Huaw
 
 * Generate an EPT (Engineering parameter file) with th same cells from previous point. It is important the cells has the exact same name (Case sensitive)
 
+* Run the tool in command line: Python app.py (You could also build the file to get an EXE file)
+
 * By running the tool the final result will be a KMZ file to be opened with Google Earth.
 
 ![picture alt](https://github.com/joch182/3G-Huawei-Propagation-Delay-Tool-Google-Earth/blob/master/assets/picture.jpg "3G Propagation Delay")

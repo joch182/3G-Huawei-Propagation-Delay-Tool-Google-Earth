@@ -18,3 +18,8 @@ venv.bak/
 #Ignore some files
 output.xlsx
 3G_TP_Results.kmz
+
+#Build
+build/
+dist/
+app.spec
