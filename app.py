@@ -25,6 +25,16 @@ def get_data_template():
     shutil.copy(src, save_dir)
     open("data_template.csv", 'r')
 
+''' This function is to browse the data got it from U2000 '''
+def browse_data():
+    global data_path
+    data_path = askopenfilename()
+
+''' This function is to browse the engineering parameter table '''
+def browse_ept():
+    global ept_path
+    ept_path = askopenfilename()
+
 ''' This function executes all calculation and generates the final XML '''
 def submit_button():
     if data_path != '' and ept_path != '':
@@ -32,16 +42,6 @@ def submit_button():
         kml_data = calc.generateKMLData(full_df)                          #Generate a dataframe with all data required for XML generation
         kml_data.to_excel("output.xlsx")                                  #Save the dataframe in an excel file
         XML.generateXML(kml_data)                                         #Generate the XML (KML) from the Dataframe
-
-''' This function is to browse the data got it from U2000 '''
-def browse_data():
-    global data
-    data_path = askopenfilename()
-
-''' This function is to browse the engineering parameter table '''
-def browse_ept():
-    global ept
-    ept_path = askopenfilename()
 
 ''' Following code is the configuration of the GUI '''
 root = Tk()
