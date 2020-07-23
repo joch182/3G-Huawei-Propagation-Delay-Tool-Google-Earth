@@ -19,7 +19,6 @@ def get_ept_template():
         shutil.copy(src, save_dir)
         open("ept_template.csv", 'r')
 
-
 def get_data_template():
     save_dir = askdirectory()
     if save_dir != '':
