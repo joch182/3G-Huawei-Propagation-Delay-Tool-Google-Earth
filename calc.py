@@ -22,7 +22,7 @@ def getCoordinateTP0(originLat, originLon, Azimuth, BW, tpProportion):
     tpProportion = round(tpProportion * 1500/100,2)  #2200 is an estimated value to shown different levels on the TP in GE
     coordString = str(originLon) + ',' + str(originLat) + ',' + str(tpProportion) + ' '
     for i in range(5):
-            distance = 0.234
+            distance = 0.16
             angle = Azimuth - (BW/2) + (i*splitBW)
             if angle >= 360:
                 angle = angle - 360
